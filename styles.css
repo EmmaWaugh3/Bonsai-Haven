@@ -1,0 +1,831 @@
+/* 
+This CSS file styles the entire website, ensuring a consistent visual design across all pages. It defines the layout, colors, typography, responsive adjustments, and any animations or transitions, making the site visually appealing and cohesive.
+*/
+
+
+/* Reset Margins and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Background */
+body {
+    background-image: url('Background_Image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensure background stays fixed while scrolling */
+}
+
+/* Free Shipping Banner */
+.top-banner {
+    background-color: green;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+}
+
+/* Header Section - Adding the transparent background to the entire header */
+header {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.6); /* Apply the faded background to the entire header */
+    width: 100%;
+    position: relative;
+}
+
+/* Header top section containing logo, title, and account-cart */
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Logo to the left, cart/account to the right */
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+
+/* Website Logo */
+.website-logo {
+    width: 90px; /* Slightly increase the width */
+    height: 90px; /* Slightly increase the height */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bonsai-title {
+    font-size: 1.8em;
+    color: #000000;
+    padding: 10px 20px;
+    background-color: #d3e4c1;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35%; /* Adjust this value to move it up slightly */
+    transform: translate(-50%, -50%);
+}
+
+/* Account, Cart, and Search Section */
+.account-cart {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.account-cart .icon-container a {
+    color: #000; /* Text color for Account and Cart */
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Space between text and icon */
+}
+
+.account-cart .icon-container a i {
+    color: white; /* Sets icon color to white */
+}
+
+.account-cart a {
+    text-decoration: none;
+    color: #000000; /* Dark green icons */
+    font-size: 0.9em;
+}
+
+.search-bar {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 120px;
+}
+
+/* Navigation Bar */
+.desktop-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin-top: 0;
+    position: relative;
+}
+
+/* White Buttons */
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.desktop-nav ul li a {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #000;
+    transition: background-color 0.3s ease;
+}
+
+.desktop-nav ul li a:hover {
+    background-color: #7db680;
+}
+
+/* Sidebar Menu for Mobile */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+}
+
+/* Desktop (min-width: 769px) */
+@media (min-width: 769px) {
+    .desktop-nav {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Header adjustment for mobile */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    
+
+    .menu-icon {
+        display: block;
+        margin: 10px;
+        font-size: 1.8em;
+    }
+
+    .website-logo {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+
+    .bonsai-title {
+        font-size: 1.2em;
+        padding: 5px;
+        margin: 0 10px;
+    }
+
+    /* Show only icons for account and cart in mobile view */
+    .account-cart .icon-container a {
+        font-size: 1.5em;
+        color: #fff; /* Make icons white */
+        display: inline-block;
+        margin: 0 5px; /* Adjust spacing if needed */
+    }
+
+    /* Center search bar in mobile view */
+        .search-bar {
+          display: block;
+          width: 80%; /* Adjust width as needed */
+         margin: 10px auto; /* Center it horizontally */
+          text-align: center;
+    }
+
+
+
+    /* Hide text for account and cart in mobile */
+    .account-cart .icon-container a span {
+        display: none; /* Hide the text part */
+    }
+
+    /* Hide desktop navigation in mobile */
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Sidebar adjustments */
+    .sidebar {
+        width: 70%;
+        background-color: #8fc087;
+    }
+
+    .sidebar a {
+        padding: 10px;
+        font-size: 1em;
+        color: #000;
+        text-align: left;
+    }
+
+    .sidebar a:hover {
+        background-color: #68a56b;
+    }
+
+    .close-btn {
+        font-size: 1.5em;
+    }
+}
+
+
+
+/* Main Section - Align text left and slideshow right */
+main.content {
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center;
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between; /* Slideshow to the right, text to the left */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Limit the total width of the content */
+    padding: 20px;
+}
+
+/* Overlay Text */
+.overlay-text {
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
+    color: #000000; /* Dark text */
+    padding: 20px; /* Space inside the box */
+    border-radius: 10px; /* Adjust for softer or sharper edges */
+    width: 300px;  /* Set a fixed width */
+    height: 300px; /* Set a fixed height to create a square */
+    text-align: center; /* Center the text */
+    font-size: 2.2em; /* font size */
+    font-weight: bold; /* Make the text bold */
+    line-height: 1.4em; /* Adjust line height for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding is included in the dimensions */
+    margin: 0 auto; /* Center the overlay horizontally */
+}
+
+/* Slideshow Styling - Align to the right */
+.slideshow-container {
+    width: 50%; /* Make the slideshow bigger */
+    max-width: 600px; /* Limit maximum width */
+    height: auto;
+    margin-left: 20px; /* Add space between text and slideshow */
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slideshow-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .overlay-text {
+        width: 90%; /* Full width in mobile */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .slideshow-container {
+        width: 90%; /* Full width in mobile */
+        margin-left: 0;
+    }
+}
+
+
+/* Overlay Text - Faded background and centered */
+.overlay-text {
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
+    color: #000000; /* Dark green text for contrast */
+    padding: 20px; /* Keep padding for spacing */
+    border-radius: 5px; /* Slightly rounded corners for a clean look */
+    width: 60%; /* Adjust the width as needed */
+    text-align: center; /* Center the text */
+    font-size: 1.2em; /* Font size for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center horizontally */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+
+    .main-container {
+        display: flex;
+        flex-direction: column-reverse; /* Reverse the order for mobile view */
+        align-items: center;
+    }
+
+    /* For overlay text in mobile view */
+    .overlay-text {
+        position: static; /* Reset positioning for mobile */
+        margin-top: 10px;
+        text-align: center; /* Center the text in mobile */
+        width: 100%; /* Make sure it spans the full width */
+        transform: none; /* Reset transform for mobile */
+    }
+
+    /* Smaller logo for mobile */
+    .website-logo {
+        width: 60px; /* Smaller logo */
+        height: 60px; /* Smaller height */
+    }
+
+    /* Smaller title for mobile */
+    .bonsai-title {
+        font-size: 1.5em; /* Adjust title size */
+        padding: 5px 10px; /* Adjust padding */
+        background-color: #d3e4c1;
+        border-radius: 5px;
+        position: absolute;
+        top: 40%; /* Adjust top position */
+        transform: translate(-50%, -50%);
+    }
+
+    /* Smaller search bar for mobile */
+    .search-bar {
+        width: 100px; /* Adjust search bar width */
+    }
+
+    /* Adjust header top for mobile */
+    .header-top {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    /* Adjust navigation for mobile */
+    .desktop-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desktop-nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .desktop-nav ul li a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+
+/* Ensure body takes full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content should take remaining space */
+main.content {
+    flex: 1;  /* This makes the main content take up all available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer should be at the bottom */
+footer {
+    background-color: rgb(124, 124, 124);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    flex-shrink: 0;  /* Ensure the footer doesn't shrink */
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------Shop Page Styles--------------------------------------------------------------------------------------*/
+
+.shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-item h2 {
+    font-size: 1.5em;
+    color: #3a633b;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.product-item .price {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.product-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #3a633b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.product-item a:hover {
+    background-color: #2a472a;
+}
+
+/* Grid for the product display */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for the product cards */
+.product-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px; /* Adjust based on image size */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.product-card a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+}
+
+.product-card a:hover {
+    color: darkgreen;
+}
+
+/* Modal container - hidden by default */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.modal-content h2 {
+    margin-bottom: 1em; /* Adds a one-line gap below the header */
+}
+
+/* Add a gap below the first paragraph in modal content */
+.modal-content p:first-of-type {
+    margin-bottom: 1em; /* Adds a gap below the first paragraph */
+}
+
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    }
+}
+
+/*--------------------------------------------------------------------------------------Care Page Styles--------------------------------------------------------------------------------------*/
+
+.care-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for contrast */
+}
+
+.care-box {
+    width: 45%; /* Half width for each box */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.care-box h2 {
+    font-size: 1.5em;
+    color: #2c5f2d; /* Green color for headings */
+    margin-bottom: 10px;
+}
+
+/* Center the headings and change their color */
+.care-box h2 {
+    text-align: center;
+    color: #000; /* Set the color to black */
+    font-weight: bold;
+}
+
+
+
+.care-box p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .care-box {
+        width: 100%; /* Full width for mobile */
+    }
+}
+
+/*--------------------------------------------------------------------------------------Contact Us Page Styles--------------------------------------------------------------------------------------*/
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+    width: 40%;
+}
+
+.contact-info h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: #3a633b;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #3a633b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #2a472a;
+}
+
+/* Mobile View Adjustments for Contact Form */
+@media (max-width: 768px) {
+    /* Adjust contact-container to stack items in mobile view */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full width in mobile */
+        padding: 20px;
+    }
+
+    /* Adjust the width of contact-info and contact-form */
+    .contact-info, .contact-form {
+        width: 90%; /* Full width in mobile */
+        margin-bottom: 20px; /* Space between info and form */
+    }
+
+    /* Center the text fields and button */
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%; /* Full width of the form container */
+        margin-top: 10px; /* Add space between fields */
+    }
+
+    .contact-form button {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #3a633b; /* Use the desktop color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    .contact-form button:hover {
+        background-color: #2a472a; /* Darker color on hover */
+    }
+    
+}
+
+/*--------------------------------------------------------------------------------------About Us Page Styles--------------------------------------------------------------------------------------*/
+
+/* About Us Page Styles */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-box h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-box p {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3a633b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: #2a472a;
+}
+
+

@@ -1,0 +1,208 @@
+<!-- 
+Title: Bonsai Haven - Plants/Shop
+Description: The Shop page provides a catalog of bonsai plants available for purchase. Each bonsai listing includes an image, name, price, and a "View Details" button that offers more information on each bonsai. 
+This page helps visitors explore the selection and make purchase decisions.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonsai Haven - Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Free Shipping Banner -->
+    <div class="top-banner">Free shipping with first order!</div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-top">
+            <div class="menu-icon" id="menuIcon">&#9776;</div>
+            <img src="Website_Image.jpg" alt="Bonsai Logo" class="website-logo">
+            <div class="bonsai-title">Bonsai Haven</div>
+            <div class="account-cart">
+                <div class="icon-container">
+                    <a href="#"><span>ACCOUNT</span><i class="fas fa-user"></i> </a>
+                    <a href="#"><span>MY CART</span><i class="fas fa-shopping-cart"></i> </a>
+                </div>
+                <input type="text" class="search-bar" id="searchBar" placeholder="Search..." />
+            </div>
+        </div>
+
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Plants/Shop</a></li>
+                <li><a href="careinfo.html">Plant Care</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar Navigation for Mobile -->
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Plants/Shop</a>
+        <a href="careinfo.html">Plant Care</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="about_us.html">About Us</a>
+    </div>
+
+    <!-- Main Section -->
+    <main class="content">
+        <div class="product-grid">
+            <!-- Product Cards with Modals -->
+            <div class="product-card">
+                <img src="Product_Images/Azalea (Rhododendron).png" alt="Azalea Bonsai">
+                <h3>Azalea Bonsai</h3>
+                <p>$20.00</p>
+                <a href="#" onclick="openModal('azalea')">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="Product_Images/Cedar (Cedrus).png" alt="Cedar Bonsai">
+                <h3>Cedar Bonsai</h3>
+                <p>$20.00</p>
+                <a href="#" onclick="openModal('cedar')">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="Product_Images/Dwarf Boxwood (Boxus).png" alt="Boxwood Bonsai">
+                <h3>Boxwood Bonsai</h3>
+                <p>$20.00</p>
+                <a href="#" onclick="openModal('boxwood')">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="Product_Images/Japanese Flowering Cherry (Prunus serrulate).png" alt="Cherry Bonsai">
+                <h3>Cherry Bonsai</h3>
+                <p>$20.00</p>
+                <a href="#" onclick="openModal('cherry')">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="Product_Images/Japanese Maple (Acer palmatum).png" alt="Maple Bonsai">
+                <h3>Maple Bonsai</h3>
+                <p>$20.00</p>
+                <a href="#" onclick="openModal('maple')">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="Product_Images/Juniper (juniperus).png" alt="Juniper Bonsai">
+                <h3>Juniper Bonsai</h3>
+                <p>$20.00</p>
+                <a href="#" onclick="openModal('juniper')">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="Product_Images/Pine (Pinus).png" alt="Pine Bonsai">
+                <h3>Pine Bonsai</h3>
+                <p>$20.00</p>
+                <a href="#" onclick="openModal('pine')">View Details</a>
+            </div>
+            <div class="product-card">
+                <img src="Product_Images/Weeping Fig (Ficus benjamina).png" alt="Weeping Fig Bonsai">
+                <h3>Weeping Fig Bonsai</h3>
+                <p>$20.00</p>
+                <a href="#" onclick="openModal('weeping-fig')">View Details</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Detail Modals -->
+<div id="azalea" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('azalea')">&times;</span>
+        <h2>Azalea</h2>
+        <p>Azaleas are flowering shrubs, but some miniature versions, typically referred to as "greenhouse azaleas," are meant to be houseplants. Dwarf varieties can grow just shy of 3 feet tall. One particular azalea, Satsuki or Southern Indian Azalea (Rhododendron indicum), is ideal for bonsai but it's also considered strictly an outdoor flowering plant. Without pruning, it can grow several feet tall, but with pruning, it is a lovely foot or so high with pink springtime blooms.</p>
+        <p><strong>Light:</strong> Full sun to partial shade; dappled shade</p>
+        <p><strong>Water:</strong> Frequent watering</p>
+        <p><strong>Color Varieties:</strong> White, pink, red, orange, and peach blooms</p>
+    </div>
+</div>
+
+<div id="cedar" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('cedar')">&times;</span>
+        <h2>Cedar</h2>
+        <p>The rough, ragged bark of cedar trees has made them a popular choice among bonsai enthusiasts. Cedar trees are evergreen conifers that grow short needle clusters along their branches, providing an opportunity for very dramatic bonsai styles. There are four cedar species frequently grown as bonsai: cedar of Lebanon (Cedrus libania), Cyprus cedar (Cedrus brevifolia), Himalayan cedar (Cedrus deodara), and Atlas cedar (Cedrus atlantica).</p>
+        <p><strong>Light:</strong> Direct sun</p>
+        <p><strong>Water:</strong> Allow the soil to partially dry between waterings</p>
+        <p><strong>Color Variations:</strong> Dark green needles</p>
+    </div>
+</div>
+
+<div id="boxwood" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('boxwood')">&times;</span>
+        <h2>Boxwood</h2>
+        <p>Dwarf boxwoods are popular shrubs and they also are good choices for bonsai plants since they respond well to pruning. Types include the littleleaf boxwood, Harland boxwood, and Korean boxwood.</p>
+        <p><strong>Light:</strong> Full sun to partial shade</p>
+        <p><strong>Water:</strong> Somewhat drought-tolerant; let dry slightly between waterings</p>
+        <p><strong>Color Varieties:</strong> Small, rounded, glossy, or leathery green leaves and insignificant green or yellow flowers</p>
+    </div>
+</div>
+
+<div id="cherry" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('cherry')">&times;</span>
+        <h2>Cherry</h2>
+        <p>Cherry trees are traditionally believed to signify friendship. They are ornamental, deciduous trees that are easy to train for bonsai. While bonsai cherry trees can be grown indoors, they grow best outdoors during summer.</p>
+        <p><strong>Light:</strong> Full sun</p>
+        <p><strong>Water:</strong> Keep the soil consistently moist.</p>
+        <p><strong>Color Varieties:</strong> Foliage is green or bronze; flowers can be various shades of white or pink.</p>
+    </div>
+</div>
+
+<div id="maple" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('maple')">&times;</span>
+        <h2>Japanese Maple</h2>
+        <p>Japanese maples are deciduous hardwood trees famous for their colorful leaves, which change with the seasons. They require frequent watering, especially during the growing season.</p>
+        <p><strong>Light:</strong> Sunny, partial sun</p>
+        <p><strong>Water:</strong> Requires frequent watering (daily or more)</p>
+        <p><strong>Color Varieties:</strong> Red, yellow, or green leaves that change colors seasonally.</p>
+    </div>
+</div>
+
+<div id="juniper" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('juniper')">&times;</span>
+        <h2>Juniper</h2>
+        <p>Juniperus is a genus of evergreen trees and shrubs that are popular as bonsai. They have small foliage that fits well with the bonsai style and are quite hardy.</p>
+        <p><strong>Light:</strong> Bright, sunny light</p>
+        <p><strong>Water:</strong> Allow soil to dry slightly before watering</p>
+        <p><strong>Color Varieties:</strong> Needles can be yellow, pale green, or dark green.</p>
+    </div>
+</div>
+
+<div id="pine" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('pine')">&times;</span>
+        <h2>Pine</h2>
+        <p>Pine trees are popular as bonsai due to their resilience and trainability. They are characterized by needles that appear in bundles and bark that becomes scaly with age.</p>
+        <p><strong>Light:</strong> Full sun</p>
+        <p><strong>Water:</strong> Water when the soil looks dry</p>
+        <p><strong>Color Varieties:</strong> Needles range from light green to bluish-green to dark green.</p>
+    </div>
+</div>
+
+<div id="weeping-fig" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('weeping-fig')">&times;</span>
+        <h2>Weeping Fig</h2>
+        <p>Weeping figs are hardy and resilient, with an umbrella-like canopy. They adapt well to indoor growing and are often kept as houseplants.</p>
+        <p><strong>Light:</strong> Part sun</p>
+        <p><strong>Water:</strong> Water frequently</p>
+        <p><strong>Color Varieties:</strong> Glossy green leaves and light-brown bark</p>
+    </div>
+</div>
+
+
+    <!-- Footer Section -->
+    <footer>© BonsaiHaven New Zealand 2024</footer>
+
+</body>
+</html>

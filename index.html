@@ -1,0 +1,84 @@
+<!-- 
+Title: Bonsai Haven - Home
+Description: This is the main homepage for Bonsai Haven. It introduces visitors to the website, offering an overview of the purpose of the site, a promotional banner, and a slideshow showcasing featured bonsai images. 
+Users can navigate to other sections of the site from here.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonsai Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Free Shipping Banner -->
+    <div class="top-banner">Free shipping with first order!</div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-top">
+            <div class="menu-icon" id="menuIcon">&#9776;</div> <!-- Hamburger icon for mobile -->
+            <img src="Website_Image.jpg" alt="Bonsai Logo" class="website-logo">
+            <div class="bonsai-title">Bonsai Haven</div>
+            <div class="account-cart">
+                <div class="icon-container">
+                    <a href="#"><span>ACCOUNT</span><i class="fas fa-user"></i></a> <!-- User icon with text -->
+                    <a href="#"><span>MY CART</span><i class="fas fa-shopping-cart"></i></a> <!-- Cart icon with text -->
+                </div>
+                <input type="text" class="search-bar" id="searchBar" placeholder="Search..." /> <!-- Search Bar -->
+            </div>
+        </div>
+
+        <!-- Desktop Navigation (visible on large screens) -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Plants/Shop</a></li>
+                <li><a href="careinfo.html">Plant Care</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar Navigation for Mobile -->
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" id="closeBtn">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Plants/Shop</a>
+        <a href="careinfo.html">Plant Care</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="about_us.html">About Us</a>
+    </div>
+
+    <!-- Main Section -->
+    <main class="content">
+        <div class="main-container">
+            <div class="overlay-text">
+                <p>Discover a diverse collection of beautifully crafted bonsai trees, perfect for adding elegance and tranquility to any environment!</p>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="Slideshow_Images/bonsai1.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="Slideshow_Images/bonsai2.jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="Slideshow_Images/bonsai3.jpg" style="width:100%">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>© BonsaiHaven New Zealand 2024</footer>
+
+</body>
+</html>
